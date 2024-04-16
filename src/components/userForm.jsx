@@ -247,7 +247,7 @@ const Form3 = ({ companyInfo, setCompanyInfo, validateCompanyInfo }) => {
     )
 }
 
-export default function UserForm({ setShowModal, setPayload, payload, addnewUser }) {
+export default function UserForm({ edituserFunc, btntype, setBtnType, setShowModal, setPayload, payload, addnewUser }) {
     const toast = useToast();
     const [step, setStep] = useState(1);
     const [progress, setProgress] = useState(33.33);
@@ -255,11 +255,11 @@ export default function UserForm({ setShowModal, setPayload, payload, addnewUser
     const handleClick = () => setShow(!show);
 
     const [userInfo, setUserInfo] = useState({
-        email: "",
-        name: "",
-        phone: "",
-        username: "",
-        website: "",
+        email: payload?.email || "",
+        name: payload?.name || "",
+        phone: payload?.phone || "",
+        username: payload?.username || "",
+        website: payload?.website || "",
     });
 
     const [validateUserInfo, setValidateUserInfo] = useState({
@@ -271,11 +271,11 @@ export default function UserForm({ setShowModal, setPayload, payload, addnewUser
     });
 
     const [userAddress, setUserAdd] = useState({
-        city: "",
-        geo: { lat: '-37.3159', lng: '81.1496' },
-        street: "",
-        suite: "",
-        zipcode: "",
+        city: payload?.address?.city || "",
+        geo: payload?.address?.geo || { lat: '-37.3159', lng: '81.1496' },
+        street: payload?.address?.street || "",
+        suite: payload?.address?.suite || "",
+        zipcode: payload?.address?.zipcode || "",
     });
 
     const [validateUserAdd, setValidateUserAdd] = useState({
@@ -287,9 +287,9 @@ export default function UserForm({ setShowModal, setPayload, payload, addnewUser
     });
 
     const [companyInfo, setCompanyInfo] = useState({
-        bs: "",
-        catchPhrase: "",
-        name: ""
+        bs: payload?.company?.bs || "",
+        catchPhrase: payload?.company?.catchPhrase || "",
+        name: payload?.company?.name || ""
     });
 
     const [validateCompanyInfo, setValidateCompanyInfo] = useState({
@@ -496,8 +496,8 @@ export default function UserForm({ setShowModal, setPayload, payload, addnewUser
                             w="7rem"
                             colorScheme="red"
                             variant="solid"
-                            onClick={() => validateForm3()}>
-                            Submit
+                            onClick={() => btntype === "new" ?  validateForm3() : edituserFunc()}>
+                                {btntype === "new" ? "Submit" : "Edit"}
                         </Button>
                     ) : null}
                 </Flex>
