@@ -2,7 +2,6 @@
 
 import { useEffect, useState } from 'react'
 import {
-    Progress,
     Box,
     ButtonGroup,
     Button,
@@ -12,19 +11,12 @@ import {
     GridItem,
     FormLabel,
     Input,
-    Select,
     SimpleGrid,
-    InputLeftAddon,
-    InputGroup,
     Textarea,
-    FormHelperText,
-    InputRightElement,
     useToast
 } from '@chakra-ui/react'
 import { validateBs, validateCatchPhrase, validateCity, validateCompanyName, validateEmail, validateGeo, validateName, validatePhone, validateStreet, validateSuite, validateUsername, validateWebsite, validateZipcode } from '../validators'
-import { OutsideClickHandler } from './home'
 import { RxCross2 } from "react-icons/rx";
-import { addUserApi } from '../apis'
 
 const Form1 = ({ userInfo, setUserInfo, validateUserInfo }) => {
     const [show, setShow] = useState(false);
@@ -201,7 +193,7 @@ const Form2 = ({ userAddress, setUserAdd, validateUserAdd }) => {
 const Form3 = ({ companyInfo, setCompanyInfo, validateCompanyInfo }) => {
 
     return (
-        <>
+        <div style={{marginLeft:"0.5rem",marginRight:"0.5rem"}}>
             <Heading w="100%" textAlign={'center'} fontWeight="normal">
                 Company Details
             </Heading>
@@ -243,7 +235,7 @@ const Form3 = ({ companyInfo, setCompanyInfo, validateCompanyInfo }) => {
 
                 </FormControl>
             </SimpleGrid>
-        </>
+        </div>
     )
 }
 
@@ -463,13 +455,15 @@ export default function UserForm({ edituserFunc, btntype, setBtnType, setShowMod
             as="form"
             onClick={(event) => handleChildClick(event)}
             position={"relative"}
+            ml={"0.5rem"}
+            mr={"0.5rem"}
         >
+
             <RxCross2 style={{ position: "absolute", right: "2rem" }} onClick={() => setShowModal(false)} />
-            {/* <Progress hasStripe value={progress} mb="5%" mx="5%" isAnimated></Progress> */}
             {step === 1 ? <Form1 userInfo={userInfo} validateUserInfo={validateUserInfo} setUserInfo={setUserInfo} /> : step === 2 ? <Form2 userAddress={userAddress} setUserAdd={setUserAdd} validateUserAdd={validateUserAdd} /> : <Form3 companyInfo={companyInfo} setCompanyInfo={setCompanyInfo} validateCompanyInfo={validateCompanyInfo} payload={payload} />}
             <ButtonGroup mt="5%" w="100%">
-                <Flex w="100%" justifyContent="space-between">
-                    <Flex>
+                <Flex gap={"1rem"} w="100%" justifyContent="space-between" direction={["column","column","row","row","row"]}>
+                    <Flex width={["100%","100%",null,null,null]} justifyContent={["space-between","space-between","left","left","left"]} >
                         <Button
                             onClick={() => {
                                 setStep(step - 1)
@@ -493,7 +487,7 @@ export default function UserForm({ edituserFunc, btntype, setBtnType, setShowMod
                     </Flex>
                     {step === 3 ? (
                         <Button
-                            w="7rem"
+                            w={["100%","100%","7rem","7rem","7rem"]}
                             colorScheme="red"
                             variant="solid"
                             onClick={() => btntype === "new" ?  validateForm3() : edituserFunc()}>

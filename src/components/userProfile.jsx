@@ -4,10 +4,11 @@ import { BsThreeDotsVertical } from "react-icons/bs";
 import { Card, CardHeader, CardBody, CardFooter, Avatar, Heading, IconButton, Image, Button, Flex, Box, Text } from '@chakra-ui/react';
 import { MdDelete, MdEdit, MdOutlineDelete } from "react-icons/md";
 import { CiEdit } from "react-icons/ci";
-const UserProfile = ({ name, email, phone, website, username, address, company,handleEdit,val }) => {
+import DeleteUser from "./deleteModal";
+const UserProfile = ({id, name, email, phone, website, username, address, company,handleEdit,val,handleDelete }) => {
 
     return (
-        <Card maxW='md' height={"100%"} bg={"rgb(0 246 255 / 16%)"}>
+        <Card maxW='md' height={"100%"}  boxShadow={"rgba(0, 0, 0, 0.24) 0px 3px 8px"} margin={"auto"}>
             <CardHeader>
                 <Flex spacing='4'>
                     <Flex flex='1' gap='4' alignItems='start' flexWrap='wrap'>
@@ -46,12 +47,11 @@ const UserProfile = ({ name, email, phone, website, username, address, company,h
                     },
                 }}
             >
-                <Button onClick={() => handleEdit(val)} flex='1' leftIcon={<CiEdit />} bg={"white"}>
+                <Button onClick={() => handleEdit(val)} flex='1' leftIcon={<CiEdit />} color={"white"} bg={"#598cc7"}>
                     Edit
                 </Button>
-                <Button flex='1' leftIcon={<MdOutlineDelete />} bg={"white"}>
-                    Delete
-                </Button>
+                <DeleteUser handleDelete={handleDelete} id={id}/>
+                
             </CardFooter>
         </Card>
     )
