@@ -35,7 +35,8 @@ We can use this project to save the user profile,edit the profile and deleting i
 <img width="1440" alt="Screenshot 2024-04-17 at 8 25 42 AM" src="https://github.com/SubodhSingh8543/tacniqueAssi/assets/112638063/1e0651d7-5ea8-4228-8556-91966e9fa55b">
 <img width="1440" alt="Screenshot 2024-04-17 at 8 25 55 AM" src="https://github.com/SubodhSingh8543/tacniqueAssi/assets/112638063/da4875b8-c403-4bf2-b59d-544a265f5563">
 <img width="1440" alt="Screenshot 2024-04-17 at 8 26 42 AM" src="https://github.com/SubodhSingh8543/tacniqueAssi/assets/112638063/eab74bef-c224-48da-b1f9-7213b063fc5f">
-![Screenshot 2024-04-17 at 8 26 50 AM](https://github.com/SubodhSingh8543/tacniqueAssi/assets/112638063/c7096d47-e64b-46f1-96ae-3b6a0e8034a3)
+
+![Screenshot 2024-04-17 at 8 26 50 AM](https://github.com/SubodhSingh8543/tacniqueAssi/assets/112638063/1242b41a-436e-4b64-b1f4-8253068dce1a)
 
 
 ## APIs Used
@@ -43,14 +44,12 @@ https://jsonplaceholder.typicode.com/
 
 ## API Endpoints
 In case of Backend Applications provide a list of your API endpoints, methods, brief descriptions, and examples of request/response.
-GET /api/users - retrieve all items
-POST /api/items - create a new item
-
+GET /api/users - retrieve all users
+POST /api/users - create a new user
+PATCH /api/users/id - edit the users
+DELETE /api/users/id - delete the user
 
 ## Technology Stack
-List and provide a brief overview of the technologies used in the project.
 
-- Node.js
-- Express.js
-- MongoDB
-- Other libraries/modules
+- React
+- chakra-ui
