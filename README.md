@@ -1,70 +1,56 @@
-# Getting Started with Create React App
+# Tacnique Assignment
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Introduction
+Welcome to our project, Explore curated user profiles with ease. Add, edit, and remove entries seamlessly. Our website is responsive and user-friendly. Enjoy a delightful experience on any device. Pagination ensures smooth navigation. Join us for an immersive journey of exploration!
 
-## Available Scripts
+## Project Type
+Frontend 
 
-In the project directory, you can run:
+## Deplolyed App
+Frontend: https://tacnique-lu-assi.vercel.app/
 
-### `npm start`
+## Video Walkthrough of the project
+https://drive.google.com/file/d/1pK3EQviKCoSgL4iSM-MnSrrnG4wTteyR/view?usp=sharing
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Features
+List out the key features of your application.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Paginatiom 
+- Edit user
+- Add user
+- Delete user
 
-### `npm test`
+## Installation & Getting started
+Clone the repository, reun the npm i command than come to the working directory and run the npm start command
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```bash
+npm install my-project
+cd my-project
+npm start
+```
 
-### `npm run build`
+## Usage
+We can use this project to save the user profile,edit the profile and deleting it.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<img width="1440" alt="Screenshot 2024-04-17 at 8 25 42 AM" src="https://github.com/SubodhSingh8543/tacniqueAssi/assets/112638063/1e0651d7-5ea8-4228-8556-91966e9fa55b">
+<img width="1440" alt="Screenshot 2024-04-17 at 8 25 55 AM" src="https://github.com/SubodhSingh8543/tacniqueAssi/assets/112638063/da4875b8-c403-4bf2-b59d-544a265f5563">
+<img width="1440" alt="Screenshot 2024-04-17 at 8 26 42 AM" src="https://github.com/SubodhSingh8543/tacniqueAssi/assets/112638063/eab74bef-c224-48da-b1f9-7213b063fc5f">
+![Screenshot 2024-04-17 at 8 26 50 AM](https://github.com/SubodhSingh8543/tacniqueAssi/assets/112638063/c7096d47-e64b-46f1-96ae-3b6a0e8034a3)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## APIs Used
+https://jsonplaceholder.typicode.com/
 
-### `npm run eject`
+## API Endpoints
+In case of Backend Applications provide a list of your API endpoints, methods, brief descriptions, and examples of request/response.
+GET /api/users - retrieve all items
+POST /api/items - create a new item
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Technology Stack
+List and provide a brief overview of the technologies used in the project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Node.js
+- Express.js
+- MongoDB
+- Other libraries/modules
